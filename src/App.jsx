@@ -32,7 +32,7 @@ console.log(import.meta.env.VITE_APPWRITE_URL)
       <Header />
 
       <main>
-       {/* <outlet /> */}
+       TODO{/* <outlet /> */}
       </main>
       <Footer />
       </div> 
