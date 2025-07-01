@@ -22,7 +22,7 @@ import PostCards from "./PostCards";
 
 import AuthLayout from "./AuthLayout";
 
-import Input from "./input" ;
+import Input from "./Input" ;
 
 import Select from "./Select" ;
 
