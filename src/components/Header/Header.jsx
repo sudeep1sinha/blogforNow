@@ -44,10 +44,10 @@ function Header() {
             <Container>
                 <nav className="flex">
                     <div className="mr-4">
-                        <link to='/'>
-                        <logo width='70px' />
+                        <Link to='/'>
+                        <Logo width='70px' />
                         
-                        </link>
+                        </Link>
                     </div>
                     <ul className="flex ml-auto">
                         {navigateItems.map((item)=>
@@ -62,7 +62,7 @@ function Header() {
                         )}
                         {authStatus && (
                             <li>
-                                <LogoutBtn></LogoutBtn>
+                                <LogoutBtn/>
                             </li>
                         )}
                     </ul>

@@ -6,6 +6,20 @@ import { Provider } from 'react-redux'
 import store from './store/store.js'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
+import { AuthLayout, Login } from './components/index.js'
+
+import Home from './pages/Home.jsx'
+
+
+import AddPost from "./pages/AddPost";
+
+import Signup from './pages/Signup'
+import EditPost from "./pages/EditPost";
+
+import Post from "./pages/Post";
+
+import AllPost from "./pages/AllPost.jsx";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,11 +46,11 @@ const router = createBrowserRouter([
             ),
         },
         {
-            path: "/all-posts",
+            path: "/all-post",
             element: (
                 <AuthLayout authentication>
-                    {" "}
-                    <AllPosts />
+                    {" "} 
+                    <AllPost />
                 </AuthLayout>
             ),
         },
@@ -44,7 +58,7 @@ const router = createBrowserRouter([
             path: "/add-post",
             element: (
                 <AuthLayout authentication>
-                    {" "}
+                     {" "} 
                     <AddPost />
                 </AuthLayout>
             ),

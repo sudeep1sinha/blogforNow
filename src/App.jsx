@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import {useState ,useEffect } from 'react'
 import authService from './appwrite/auth'
 import {login , logout} from './store/authSlice'
-
+import { Outlet } from 'react-router-dom'
 import './App.css'
 import { Footer, Header } from './components'
 
@@ -32,7 +32,7 @@ console.log(import.meta.env.VITE_APPWRITE_URL)
       <Header />
 
       <main>
-       TODO{/* <outlet /> */}
+       TODO: <Outlet /> 
       </main>
       <Footer />
       </div> 
