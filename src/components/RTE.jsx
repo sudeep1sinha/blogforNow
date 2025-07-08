@@ -1,4 +1,4 @@
-import React from 'react'
+  import React from 'react'
 import {Editor} from '@tinymce/tinymce-react'
 import { Controller } from 'react-hook-form'
 import conf from "../conf/conf"
@@ -50,4 +50,5 @@ export default function RTE({name , control , label , defaultValue = ""}) {
         </div>
   )
 }
+
 

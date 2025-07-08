@@ -1,4 +1,5 @@
 import conf from "../conf/conf.js";
+import { Permission, Role } from "appwrite";
 
 import { Client, Account, ID , Databases , Query , Storage} from "appwrite";
 
@@ -25,7 +26,7 @@ export class Service{
                 conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
                 slug,
-                console.log("slug",slug),
+                
                 {
                     title,
                     content,
@@ -33,6 +34,7 @@ export class Service{
                     status,
                     userId,
                 }
+                
             )
 
         }catch(error){
@@ -113,7 +115,8 @@ export class Service{
             return await this.bucket.createFile(
                 conf.appwriteBucketId,
                 ID.unique(),
-                file
+                file,
+              
             );
 
         }catch(error){
@@ -137,11 +140,14 @@ export class Service{
         }
     }
 
-    getfilePreview(fileId){
-        return this.bucket.getFilePreview(
+    getFileView(fileId){
+        
+        return this.bucket.getFileView(
             conf.appwriteBucketId,
-            fileId
-        )
+            fileId,
+        );
+        
+        
         
     }
 }
